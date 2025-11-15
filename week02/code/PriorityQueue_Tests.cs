@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 //To fix the logical error and make it a FIFO Queue while keeping the List<Person> structure, Enqueue must add to the end, and Dequeue must remove from the front
 // Use _queue.Add(person);used to add to the end of the list ($O(1)$ time complexity).
 //_queue.RemoveAt(0);used to remove the oldest element ($O(n)$ time complexity, but correct for functionality).
-//The Dequeue method should also be enhanced to throw a proper exception if the queue is empty.
+//sThe Dequeue method should also be enhanced to throw a proper exception if the queue is empty.
 [TestClass]
 public class PriorityQueueTests
 {

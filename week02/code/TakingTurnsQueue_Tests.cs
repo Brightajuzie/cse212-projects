@@ -3,7 +3,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 // TODO Problem 1 - Run test cases and record any defects the test code finds in the comment above the test method.
 // DO NOT MODIFY THE CODE IN THE TESTS in this file, just the comments above the tests. 
 // Fix the code being tested to match requirements and make all tests pass. 
-
+Test: Dequeue from an empty queue throws InvalidOperationException with the correct message.
+/// Expected Result: PASS
+/// Actual Result (Initial Code): FAIL. 
+/// The initial implementation (likely using a List or similar without proper checks) might throw an IndexOutOfRangeException or simply return a default value, or the exception message might be incorrect. Assuming it throws a general exception or wrong message.
 [TestClass]
 public class TakingTurnsQueueTests
 {
