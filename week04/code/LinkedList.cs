@@ -1,9 +1,11 @@
+using System; // Added for the 'bool' type in HeadAndTailAreNull/NotNull methods
 using System.Collections;
-using System.Collections.Generic; // Added for IEnumerable<T>
+using System.Collections.Generic;
+using System.Linq; // Added for the 'Cast<int>()' extension method
 
 public class LinkedList : IEnumerable<int>
 {
-    // --- CRITICAL CORRECTION: Missing Node class added here ---
+    
     private class Node
     {
         public int Data { get; set; }
@@ -62,6 +64,7 @@ public class LinkedList : IEnumerable<int>
         else
         {
              
+            
             newNode.Prev = _tail; // Connect new node's Prev to the old tail
             _tail.Next = newNode; // Connect the old tail's Next to the new node
             _tail = newNode; // Update the tail to point to the new node
@@ -153,7 +156,7 @@ public class LinkedList : IEnumerable<int>
     public void Remove(int value)
     {
         // TODO Problem 3 (Implementation was provided and is correct)
-        // CORRECTION: Removed duplicated method definition
+      
         
         // Start searching from the head of the list.
         Node? curr = _head;
@@ -162,7 +165,7 @@ public class LinkedList : IEnumerable<int>
         {
             if (curr.Data == value)
             {
-                // Node found! Now determine its position for removal.
+               
                 
                 // Case 1: Node is the Head (and possibly the only node)
                 if (curr == _head)
@@ -241,7 +244,7 @@ public class LinkedList : IEnumerable<int>
     /// <summary>
     /// Iterate backward through the Linked List
     /// </summary>
-    // CORRECTION: Changed return type from IEnumerable to IEnumerable<int>
+    
     public IEnumerable<int> Reverse() 
     {
         // TODO Problem 5 (Implementation provided below)
@@ -259,13 +262,13 @@ public class LinkedList : IEnumerable<int>
     }
 
     // Just for testing.
-    public Boolean HeadAndTailAreNull()
+    public bool HeadAndTailAreNull() // Corrected type: Boolean -> bool
     {
         return _head is null && _tail is null;
     }
 
-    // Just for testing.
-    public Boolean HeadAndTailAreNotNull()
+    
+    public bool HeadAndTailAreNotNull() // Corrected type: Boolean -> bool
     {
         return _head is not null && _tail is not null;
     }
